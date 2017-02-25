@@ -6,15 +6,31 @@ body {
 	background-size: cover;
 }
 
-header {
+header{
+  	background:url('https://farm9.staticflickr.com/8760/17195790401_ceeeafcddb_o.jpg');
+	background-size:cover;
+	font-family: 'Cabin Condensed', sans-serif;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
 	height: 360px;
 	width: 100%;
-	background: #ffffff;
 	border-bottom: 3px solid #000000;
+}
+
+svg {
+	font-weight:bold;
+	max-width:600px;
+	height:auto;
+	margin-top: 210px;
 }
 
 .banner {
 	border-bottom: 2px solid #000000;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .banner:hover {
@@ -24,14 +40,18 @@ header {
 .logo {
 	width: 128px;
 	height: 128px;
-	margin-left: 20px;
-	margin-bottom: 60px;
+	float: left;
+	position: absolute;
+	top: 225px;
+	left: 20px;
 	cursor: pointer;
 	transition: all ease-in-out .5s;
+	animation: none;
 }
 
 .logo:hover {
-	margin-bottom: 75px;
+	-webkit-animation: wobble 2s;
+	animation: wobble 2s infinite;
 	transition: all ease-in-out .5s;
 }
 
@@ -39,8 +59,9 @@ header {
 	width: 166px;
 	height: 120px;
 	float: right;
-	margin-top: 20px;
-	margin-right: 40px;
+	position: absolute;
+	top: 225px;
+	right: 20px;
 }
 
 .content {
@@ -52,15 +73,17 @@ header {
 	border-radius: 15px;
 }
 
-.content > iframe {
+.content > #iframe1 {
 	float: left;
 	margin-top: 120px;
 	margin-left: 20px;
 	border: 2px solid #000000;
 }
 
-.content > iframe:hover {
-	opacity: 0.7;
+.content > #iframe1:hover .content > .iframe1-content {
+	color: red
+	transform: scale(1.05);
+	transition: all ease-in-out .5s;
 }
 
 .content > .iframe1-content {
@@ -282,60 +305,162 @@ header {
 	text-decoration: none;
 }
 
-.title {
-	outline: none;
+#iframe2 {
+	float: left;
+	position: absolute;
+	left: 88px;
+	top: 900px;
+	border: 2px solid #000000;
+}
+
+.iframe2-content {
+	float: left;
+	margin-left: 400px;
+	margin-top: 110px;
+	font-weight: bold;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all ease-in-out .5s;
+	font-style: oblique;
+}
+
+.content > .iframe2-content > a {
+	font-style: italic;
 	text-decoration: none;
-	margin-left: 330px;
-	margin-top: 33px;
-	width: 30%;
+	color: #C1C1C1;
+}
+
+.content > .iframe2-content:hover a {
+	color: red;
+	transform: scale(0.95);
+	transition: all ease-in-out .5s;
+}
+
+.content > .iframe2-content:hover {
+	color: red;
+	transform: scale(0.95);
+	transition: all ease-in-out .5s;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 0;
+	margin-left: 35%;
+	font-weight: 900;
+	font-size: 40px;
+	outline: none;
+	position: relative;
+	text-decoration: none;
 	font-size: 8em;
 	line-height: 1.2;
-	color: #9e9ba4;
 	display: inline-block;
-}
-
-.text--home {
 	text-transform: uppercase;
-	font-weight: 900;
-	overflow: hidden;
-	line-height: 0.75;
-	color: #b2b0a9;
+	font-family: 'Montserrat', sans-serif;
+	color: #b0e9ff;
+	text-shadow: 0 0 1px rgba(0,0,0,.2);
+	cursor: pointer;
 }
 
-.text--home:hover {
-	color: #b2b0a9;
-}
-
-.text--home::after {
-	content: '';
+h1:before {
+	content: 'HOME';
+	text-transform: uppercase;
 	position: absolute;
-	height: 16px;
-	left: 480px;
-	width: 23%;
-	top: 45%;
-	margin-top: -8px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 25%;
+	color: #ffffff;
+	text-shadow: 0 0 1px rgba(0,0,0,.2);
+	overflow: hidden;
+	animation: animate 6s infinite linear;
+	transition: all ease-in-out 1.2s;
+}
+
+@keyframes animate {
+	0% {
+		height: 25%;
+		transition: all ease-in-out 1.2s;
+	}
+
+	25% {
+		height: 50%;
+		transition: all ease-in-out 1.2s;
+	}
+
+	50% {
+		height: 30%;
+		transition: all ease-in-out 1.2s;
+	}
+
+	75% {
+		height: 70%;
+		transition: all ease-in-out 1.2s;
+	}
+
+	100% {
+		height: 25%;
+		transition: all ease-in-out 1.2s;
+	}
+}
+
+@keyframes subtle-level {
+	0% {
+		height: 48%;
+		transition: all ease-in-out 1.2s;
+	}
+
+	25% {
+		height: 50%;
+		transition: all ease-in-out 1.2s;
+	}
+
+	50% {
+		height: 45%;
+		transition: all ease-in-out 1.2s;
+	}
+
+	75% {
+		height: 44%;
+		transition: all ease-in-out 1.2s;
+	}
+
+	100% {
+		height: 48%;
+		transition: all ease-in-out 1.2s;
+	}
+}
+
+.Wave-Loader {
+	text-transform: uppercase;
+	font-family: 'Cabin Condensed', sans-serif;
+	font-weight: bold;
+	font-size: 100px;
+	text-align: center;
+	height: 120px;
+	line-height: 110px;
+	vertical-align: bottom;
+	position: absolute;
+	left: 0;
 	right: 0;
-	background: #ffffff;
-	transform: translate3d(-100%,0,0);
-	transition: transform 0.4s;
-	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	top: 240px;
+	bottom: 0;
 }
 
-.text--home:hover::after {
-	transform: translate3d(100%,0,0);
+.Wave-Loader.Wave {
+	background-image: url("http://i.imgur.com/7YFquak.png");
+	-moz-background-clip: text;
+	-o-background-clip: text;
+	  -webkit-background-clip: text;
+		background-clip: text;
+	color: transparent;
+	text-shadow: 0px 0px rgba(255, 255, 255, 0.06);
+	animation: Wave-Loader 1s infinite linear;
+	background-size: 200px 100px;
+	background-repeat: repeat-x;
+	opacity: 1;
 }
-
-.text--home::before {
-	content: attr(data-letters);
-	position: absolute;
-	z-index: 2;
-	overflow: hidden;
-	color: #424242;
-	white-space: nowrap;
-	width: 0%;
-	transition: width 0.4s 0.3s;
-}
-
-.text--home:hover::before {
-	width: 30%;
+@keyframes Wave-Loader {
+	0% { background-position: 0 bottom; }
+	100% { background-position: 200px bottom; }
 }

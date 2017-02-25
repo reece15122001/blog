@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Sailing Vlog</title>
+		<title>Sailing Vlogs</title>
 		<link href="style.css" type="text/css" rel="stylesheet">
+		<link href="animate.css" type="text/css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="https://use.fontawesome.com/319332d960.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
@@ -12,32 +13,50 @@
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-		<script src="jquery-3.1.1.min"></script>
-		<script src="jquery.mobile-1.4.5.min"></script>
-		<script src="jquery.mobile-1.4.5"></script>
+		<link href="https://fonts.googleapis.com/css?family=Cabin+Condensed" rel="stylesheet">
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="index.js"></script>
 	</head>
 
 <header>
 	
 <img class="banner" src="http://i.imgur.com/4KAPTcb.jpg" width="100%" height="200px" />
 
-<img class="logo" src="http://i.imgur.com/3oxmvCT.png" />
 
-	<a class="title text--home" href="" data-letters="home">HOME</a>
+<svg viewbox="0 0 100 20">
+  <defs>
+    <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="5%" stop-color="#326384"/>
+      <stop offset="95%" stop-color="#123752"/>
+    </linearGradient>
+    <pattern id="wave" x="0" y="0" width="120" height="20" patternUnits="userSpaceOnUse">
+      <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+        <animateTransform attributeName="transform" type="translate" begin="0s" dur="1.5s" from="0,0" to="40,0" repeatCount="indefinite" />
+      </path>
+    </pattern>
+  </defs>
+  <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#wave)"  fill-opacity="0.6">HOME</text>
+  <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#gradient)" fill-opacity="0.1">HOME</text>
+</svg>
+
+<img class="logo animated slideInLeft" src="http://i.imgur.com/3oxmvCT.png" />
 
 <a href="https://www.youtube.com/channel/UC_bNkgSW5C6UgZmr0cehnoA" target="_blank"><img class="youtube-link" src="https://www.youtube.com/yt/brand/media/image/YouTube-icon-full_color.png" /></a>
 
 </header>
 
 <body>
+
+<script language="Javacript">
+
+
+</script>
 
 <div align="center">
 
@@ -55,12 +74,19 @@
 
 		</div>
 
-		<iframe width="360" height="200" src="https://www.youtube.com/embed/poUdaF-xIRg" frameborder="0" allowfullscreen></iframe>
+		<iframe id="iframe1" width="360" height="200" src="https://www.youtube.com/embed/poUdaF-xIRg" frameborder="0" allowfullscreen></iframe>
 		<p class="iframe1-content">CamPro POV from Sailing at the Portsmouth Waterports Centre in <a>September, 2016</a>.</p>
+
+		<iframe id="iframe2" width="360" height="200" src="https://www.youtube.com/embed/BArzNYNV3Qw" frameborder="0" allowfullscreen></iframe>
+		<p class="iframe2-content">My first video, used as a taster for the type of videos I would be uploading. The sailing is at the Portsmouth Watersports Centre in <a>July, 2016</a>.</p>
 
 	</div>
 
 </div>
 
 </body>
+
+<footer>
+
+</footer>
 </html>
